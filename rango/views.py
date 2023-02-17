@@ -21,7 +21,7 @@ def index(request):
     context_dict = {}
     context_dict['boldmessage'] = 'Crunchy, creamy, cookie, candy, cupcake!'
     context_dict['categories'] = category_list
-    context_dict['page_views'] = page_list
+    context_dict['pages'] = page_list
     # Return a rendered response to send to the client.
     # We make use of the shortcut function to make our lives easier.
     # Note that the first parameter is the template we wish to use.

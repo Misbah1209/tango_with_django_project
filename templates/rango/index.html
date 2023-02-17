@@ -27,9 +27,9 @@
         </div>
         <div>
             <h2>Most Viewed Pages</h2>
-            {% if page_views %}
+            {% if pages %}
             <ul>
-                {% for page in page_views %}
+                {% for page in pages %}
                 <li>{{page.title}}</li>
                 {% endfor %}
             </ul>
