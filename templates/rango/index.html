@@ -5,15 +5,31 @@
         <title>Rango</title>
     </head>
     <body>
-        <h1 id="demo">Rango says...</h1>
+        <h1>Rango says...</h1>
         <div>
             hey there partner! <br />
             <strong>{{ boldmessage }}</strong><br />
            
         </div>
+
         <div>
-            <a href="/rango/about/">About</a><br />
-            <img /> harry <img src="{% static 'images/hs.jpg' %}" alt="Picture of a HS."/>
+        {% if categories %}
+            <ul>
+            {% for category in categories %}
+                <li>
+                    <!-- The following line is changed to add an HTML hyperlink -->
+                    <a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+        </div>
+            
+        <div>
+            <a href="/rango/about/">About Harry</a><br />
+            <img  /> harry <img src="{% static 'images/hs.jpg' %}" alt="Picture of a HS."/>
             <img src="{{ MEDIA_URL }}hs3.jpeg" alt="Picture of a LOT."/>.
         </div>
     </body>
