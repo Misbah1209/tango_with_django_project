@@ -1,23 +1,23 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
-
 {% block title_block %}
-    About Rango.
+About Us
 {% endblock %}
-
 {% block body_block %}
-    <h1>Rango says ...</h1>
-    <div>
-        here is the about page. <br /> 
+<div class="jumbotron p-4">
+    <div class="container">
+        <h1 class="jumbotron-heading">About Us</h1>
+        
+            Hey there!
+
+            This website is done by Misbah.
+
+            <p>Visits: {{ visits }}</p>
     </div>
     <div>
-        This tutorial has been put together by Misbah<br />
+        <img />
+        <img src="{% static 'images/hs.jpg' %}" alt="Picture of a HS." />
+        <img src="{{ MEDIA_URL }}hs3.jpeg" alt="Picture of a LOT." />
     </div>
-    <div>
-        <p>Visits: {{ visits }}</p>
-    </div>
-    <div>
-        <img  /> harry <img src="{% static 'images/hs.jpg' %}" alt="Picture of a HS."/>
-        <img src="{{ MEDIA_URL }}hs3.jpeg" alt="Picture of a LOT."/>
-    </div>
+</div>
 {% endblock %}
